@@ -1,0 +1,38 @@
+
+body {
+  line-height: 1;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 100%;
+  position: relative;
+  margin: 0;
+}
+
+.splash-screen{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #1ce;
+  color: #dd3545;
+  font-size: 22px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.splash-screen > img {
+  margin-bottom: 30px;
+}
+
+.sticky-footer {
+  position: fixed;
+  bottom: 0px;
+  background: #fff;
+  box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+  width: 100%;
+  z-index: 8;
+  height: 50px;
+}
