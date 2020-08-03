@@ -1,10 +1,13 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 
 body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   line-height: 1;
-  font-family: 'Open Sans',sans-serif;
   font-size: 100%;
-  position: relative;
-  margin: 0;
+  background-color: #f7f7f7;
 }
 
 .splash-screen{
@@ -13,9 +16,7 @@ body {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #1ce;
-  color: #dd3545;
-  font-size: 22px;
+  background-color: #f7f7f7;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -23,8 +24,44 @@ body {
   justify-content: center;
 }
 
-.splash-screen > img {
-  margin-bottom: 30px;
+.logo {
+  width: 70px;
+  height: 70px;
+  border-radius: 20px;
+  background: radial-gradient(circle at 30% 107%, #FDF497 0%, #FDF497 5%, #FD5949 45%, #D6249F 60%, #285AEB 90%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.square {
+  width: 43px;
+  height: 43px;
+  background-color: transparent;
+  border: 5px solid white;
+  border-radius: 15px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle-big {
+  width: 16px;
+  height: 16px;
+  background-color: transparent;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+
+.circle-small {
+  width: 6.5px;
+  height: 6.5px;
+  background-color: white;
+  border-radius: 50%;
+  position: absolute;
+  top: 4px;
+  right: 4px;
 }
 
 .sticky-footer {

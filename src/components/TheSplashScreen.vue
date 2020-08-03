@@ -1,35 +1,30 @@
 <template>
-  <AnimationItem
-    class="splash-screen"
-  >
-    <img
-      src="../assets/favicon.png"
-      alt="Some Icon"
-    >
-    <div>Экран заставки</div>
-    <button @click="click">
-      click
-    </button>
+  <AnimationItem class="splash-screen">
+    <TheSplashScreenLogo />
   </AnimationItem>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
+import TheSplashScreenLogo from './TheSplashScreenLogo.vue';
 
 
 
 export default defineComponent({
-    setup() {
+  components: {
+    TheSplashScreenLogo
+  },
+  setup() {
 
 
-      const click = () => {
-        console.log("test")
-      }
+    const click = () => {
+      console.log("test")
+    }
 
 
-      return {
-        click
-      }
+    return {
+      click
+    }
   }
 });
 </script>
