@@ -1,11 +1,16 @@
 <template>
-  <AnimationItem class="splash-screen">
+  <AnimationItem
+    :subject="animationSubject"
+    class="splash-screen"
+  >
     <TheSplashScreenLogo />
   </AnimationItem>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { Subject } from 'rxjs';
+import { defineComponent, onBeforeUnmount } from 'vue';
+
 import TheSplashScreenLogo from './TheSplashScreenLogo.vue';
 
 
@@ -15,15 +20,18 @@ export default defineComponent({
     TheSplashScreenLogo
   },
   setup() {
+    const animationSubject = new Subject<string>()
 
+    setTimeout(() => {
+      animationSubject.next('Animate');
+    }, 2000)
 
-    const click = () => {
-      console.log("test")
-    }
-
+    onBeforeUnmount(() => {
+      animationSubject.complete()
+    });
 
     return {
-      click
+      animationSubject
     }
   }
 });
