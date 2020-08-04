@@ -73,3 +73,38 @@ body {
   z-index: 8;
   height: 50px;
 }
+
+
+.animatable.fade-out-active {
+  animation-duration: 200ms;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  overflow: hidden;
+  animation-name: fadeOut;
+}
+
+.animatable.fade-out-after {
+  opacity: 0;
+}
+
+.animatable.fade-out-before {
+  opacity: 1
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}

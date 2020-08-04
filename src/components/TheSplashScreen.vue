@@ -1,7 +1,8 @@
 <template>
   <AnimationItem
-    :subject="animationSubject"
     class="splash-screen"
+    :subject="animationSubject"
+    :duration="'500ms'"
   >
     <TheSplashScreenLogo />
   </AnimationItem>
